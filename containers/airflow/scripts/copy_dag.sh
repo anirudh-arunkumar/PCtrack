@@ -1,0 +1,1 @@
+docker cp ../../../py/airflow/dags/* 9b164980c263:/opt/airflow/dags/

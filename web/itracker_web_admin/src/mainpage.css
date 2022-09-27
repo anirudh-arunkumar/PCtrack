@@ -1,0 +1,51 @@
+.card {
+    position: relative;
+    display: flex;
+}
+
+.card-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    line-height: 18px;
+    color: rgb(100, 103, 119);
+}
+
+.card-text {
+    display: flex;
+    box-sizing: inherit;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+    color: rgb(100, 103, 119);
+    font-size: 14px;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+p.card-text {
+    font-size: 11px;
+}
+
+.card-value {
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(142, 144, 155);
+}
+
+.card-multi-value {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(142, 144, 155);
+    margin-bottom: 0.1rem
+}

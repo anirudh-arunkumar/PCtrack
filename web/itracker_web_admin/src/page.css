@@ -1,0 +1,9 @@
+.page-scrollpy {
+    height: 85vh;
+    overflow-y: scroll;
+}
+
+.page {
+    height: 90vh;
+    overflow-y: scroll;
+}

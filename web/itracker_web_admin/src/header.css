@@ -1,0 +1,31 @@
+.main-header {
+    color: white;
+    padding-top: 0.4%;
+    padding-right: 0.4%;
+    padding-left: 0.4%;
+    padding-bottom: 0.4%;
+    font-size: 1.15em;
+    position: relative;
+    min-height: 50px;
+    border-radius: 0;
+}
+
+.home_link {
+    text-decoration: none;
+    background-color: unset !important;
+}
+
+.icon-home, .header-menu-icon-button, .icon-button {
+    cursor: pointer;
+    color: black;
+    padding-right: 0.2em;
+    font-size: 1.2em;  
+}
+
+.main-header .right-menu {
+    text-align: right;
+}
+
+.main-header .left-menu {
+    text-align: left;
+}

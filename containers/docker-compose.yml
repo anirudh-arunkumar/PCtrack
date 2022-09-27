@@ -1,0 +1,47 @@
+version: '3.7'
+volumes:
+  itrackerdb:
+    external: true
+    name: itrackerdb
+  itrackertemp:
+    external: true
+    name: itrackerdb
+  itracker_pgdb:
+    external: true
+    name: itracker_pgdb
+
+services:
+  itemtracker_mdb:
+    image: mongo:4.4.2
+    restart: always
+    ports:
+    - "27091:27017"
+    volumes:
+    - itrackerdb:/data/db
+    - itrackertemp:/data/temp
+  
+  itracker_webgui:
+    image: itrackerwebadmin
+    stdin_open: true
+    tty: true
+    ports:
+      - "3010:3000"
+
+  airflow_db:
+      image: postgres:13.1
+      restart: always
+      environment:
+        POSTGRES_PASSWORD: airflow
+        POSTGRES_USER: airflow
+        POSTGRES_DB: airflow
+      ports:
+      - "5433:5432"
+      volumes:
+      - itracker_pgdb:/var/lib/postgresql/data
+
+  airflow:
+    image: itracker_airflow
+    depends_on: 
+      - airflow_db
+    ports:
+      - "8051:8080"

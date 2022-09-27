@@ -1,0 +1,17 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.9em;
+  height: 100%;
+  width: 100%;
+  line-height: normal;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

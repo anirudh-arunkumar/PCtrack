@@ -1,0 +1,27 @@
+version: '3.7'
+
+volumes:
+ itracker_pgdb:
+    external: true
+    name: itracker_pgdb
+
+services:
+
+  airflow_db:
+      image: postgres:13.1
+      restart: always
+      environment:
+        POSTGRES_PASSWORD: airflow
+        POSTGRES_USER: airflow
+        POSTGRES_DB: airflow
+      ports:
+      - "5433:5432"
+      volumes:
+      - itracker_pgdb:/var/lib/postgresql/data
+
+  airflow:
+    image: itracker_airflow
+    depends_on: 
+      - airflow_db
+    ports:
+      - "8083:8080"
