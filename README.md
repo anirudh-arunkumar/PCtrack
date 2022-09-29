@@ -4,7 +4,7 @@ Mongo
 
 
 Build Container
-    Change directory to contianers 
+    Change directory to containers 
     
     Mac/Linux
         1. ./build.sh
